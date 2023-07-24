@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: hsl(36, 100%, 99%);
+    --font-family: 'Inter', sans-serif;
+    --link-hover-color: hsl(5, 85%, 63%);
+    --button-color: hsl(5, 85%, 63%);
+    --button-hover-color: hsl(240, 100%, 5%);
+    --button-text-color: hsl(36, 100%, 99%);
+    --side-bar-bg-color: hsl(240, 100%, 5%);
+    --side-bar-h1-color: hsl(35, 77%, 62%);
+    --side-bar-link-hover-color: hsl(35, 77%, 62%);
+    --side-bar-link-color: hsl(36, 100%, 99%);
+    --side-bar-p-color: hsl(233, 8%, 79%);
+    --side-bar-bb-color: hsl(236, 13%, 42%);
+    --text-color: hsl(236, 13%, 42%);
+    /* --text-color: hsl(236, 13%, 42%); */
+    --hero-h1-color: hsl(240, 100%, 5%);
+    --footer-h2-color: hsl(233, 8%, 79%);
+    --footer-h3-color: hsl(240, 100%, 5%);
+}
+
+/* custom styles */
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 1.5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    /* padding: 20px; */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 500ms ease-in-out;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Header */
+
+.flex-box, .nav-bar ul {
+    display: flex;
+}
+
+.flex-box {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    align-self: center;
+}
+
+.nav-bar ul{
+    width: 500px;
+    font-size: .85rem;
+    justify-content: space-between;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.mobile-nav-bar {
+    display: none;
+}
+
+/* hero section */
+
+section.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.hero {
+    max-width: 750px;
+}
+
+.hero-image img, .desktop-web-3 {
+    width: 100%;
+}
+
+.mobile-web-3 {
+    display: none;
+}
+
+.hero-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.hero-header {
+    max-width: 300px;
+}
+
+.hero-header .web-3 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--hero-h1-color);
+}
+
+.hero-text {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-button {
+    width: 53%;
+    height: 50px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    transition: all 450ms ease-in-out;
+
+}
+
+.hero-button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+/* side bar */
+
+.side-bar {
+    max-width: 400px;
+    background-color: var(--side-bar-bg-color);
+    color: var(--side-bar-p-color);
+    padding: 30px;
+    max-height: 100%;
+}
+
+.side-header {
+    color: var(--side-bar-h1-color);
+    font-size: 1.7rem;
+}
+
+.side-bar-div {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--side-bar-bb-color);
+}
+
+.third-div {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.side-bar-div a {
+    color: var(--side-bar-link-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.side-bar-div a:hover {
+    color: var(--side-bar-link-hover-color);
+}
+
+.side-bar-div p {
+    font-size: .87rem;
+}
+
+
+
+/* foot flex-box */
+
+.foot-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.foot-flex {
+    display: flex;
+    width: 400px;
+}
+
+.foot-flex img {
+    margin-right: 15px;
+    height: 150px;
+}
+
+.flex-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+}
+
+.flex-desc h2 {
+    color: var(--footer-h2-color);
+}
+
+.flex-desc h3 {
+    color: var(--footer-h3-color);
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+    body {
+        height: auto;
+        padding: 25px 0;
+    }
+
+    .container {
+        max-width: 800px;
+
+    }
+
+    section.container {
+        flex-direction: column;
+    }
+
+    .hero {
+        max-width: 100%;
+    }
+
+    .side-bar {
+        max-width: 500px;
+        align-self: center;
+        margin-top: 70px;
+    }
+
+    .foot-wrapper {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    .foot-flex {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .foot-flex:nth-of-type(1) {
+        margin-right: unset;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    header.flex-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px 15px;
+        background-color: #fff;
+
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background-color: var(--body-color);
+        border: none;
+        display: flex;
+        transition: all 300ms ease-in-out;
+    }
+
+    .hamburger-menu:hover {
+        transform: scale(.9);
+    }
+
+    .hamburger-menu img{
+        height: 25px;
+        width: 45px;
+        align-self: center;
+    }
+
+    .hero-flex {
+        flex-direction: column;
+    }
+
+    .desktop-web-3 {
+        display: none;
+    }
+
+    .mobile-web-3 {
+        display: block;
+    }
+
+    .hero-header {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        margin-bottom: 25px;
+    }
+
+    .foot-wrapper {
+        max-width: 100%;
+    }
+
+    .foot-flex img {
+        width: 90px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero-header .web-3 {
+        font-size: 2.1rem;
+    }
+
+    .side-bar-div a {
+        font-size: 1rem;
+    }
+
+    .side-bar-div p {
+        font-size: .74rem;
+    }
+
+    .flex-desc {
+        width: 100%;
+    }
+}
